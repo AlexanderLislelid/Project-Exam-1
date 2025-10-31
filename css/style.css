@@ -1,3 +1,5 @@
+@import url(./variables.css);
+
 /* Navigation Desktop*/
 
 .nav-logo {
@@ -14,10 +16,20 @@
 .nav-links li:nth-child(5) {
   margin-left: auto;
 }
+
 .fa-circle-user,
 .fa-cart-shopping {
   margin-right: 8px;
 }
+
+.nav-links a:hover {
+  color: var(--nav-hover);
+}
+
+.nav-links i {
+  color: var(--primary-text);
+}
+
 .logo-text {
   text-align: center;
   font-size: 36px;
