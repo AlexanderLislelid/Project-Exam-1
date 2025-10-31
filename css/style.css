@@ -1,0 +1,25 @@
+/* Navigation Desktop*/
+
+.nav-logo {
+  max-width: 90px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-right: 38px;
+}
+
+.nav-links li:nth-child(5) {
+  margin-left: auto;
+}
+.fa-circle-user,
+.fa-cart-shopping {
+  margin-right: 8px;
+}
+.logo-text {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 20%;
+}

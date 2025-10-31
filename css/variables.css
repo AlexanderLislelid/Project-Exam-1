@@ -1,0 +1,31 @@
+:root {
+  /* Typography */
+
+  /* Font sizes */
+
+  /* Font-weights */
+
+  /* Colors */
+  --primary-background: #faf9f6; /* Off white background color */
+  --section-background: #f3f2ef; /* Light Gray background for forms etc */
+  --primary-text: #1c1c1c; /* Primary text color */
+  --secondary-text: #5a5a5a; /* Secondary text color, for placeholder text etc */
+  --border-color: #e4e2dd; /* Border Color */
+  /*
+
+    Fill in later
+
+  --acccent-color: 
+  --accent-color-hover:
+  --accent-color-alt:
+  */
+
+  /* Spacing */
+  --spacing-0: 0px; /* No spacing */
+  --spacing-8: 8px; /* Small padding/margin */
+  --spacing-16: 16px; /* General padding/margin */
+  --spacing-24: 24px; /* Section dividers, card padding */
+  --spacing-32: 32px; /* Large section separation */
+  --spacing-40: 40px; /* Layout padding, major section gaps */
+  --spacing-48: 48px; /* Page-level padding for structure*/
+}
