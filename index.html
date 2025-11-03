@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./css/components/navbar.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
     <link rel="stylesheet" href="./css/homepage.css" />
+    <script type="module" src="./js/product-feed.js"></script>
   </head>
   <body>
     <nav>
@@ -60,11 +61,22 @@
     </nav>
     <main>
       <h1 class="logo-text">PLETHORA</h1>
+      <div class="carousel-container">
+        <div class="carousel-images">
+          <!--images injected here by js-->
+        </div>
+        <button class="prev-btn">
+          <i class="fa-solid fa-circle-left"></i>
+        </button>
+        <button class="next-btn">
+          <i class="fa-solid fa-circle-right"></i>
+        </button>
+      </div>
     </main>
     <footer>
       <div class="footer-links">
-        <a href=./index.html>
-        <img src="./images/logo.png" class="footer-logo" />
+        <a href="./index.html">
+          <img src="./images/logo.png" class="footer-logo" />
         </a>
         <p>Modern Essentials, beautifully made.</p>
         <a href="./about.html">About</a>
@@ -72,13 +84,13 @@
         <a href="./shop.html">Shop</a>
         <div class="social-media-icons">
           <a href="https://www.instagram.com">
-          <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.snapchat.com">
-          <i class="fa-brands fa-snapchat"></i>
+            <i class="fa-brands fa-snapchat"></i>
           </a>
           <a href="https://www.facebook.com">
-          <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook"></i>
           </a>
         </div>
       </div>
