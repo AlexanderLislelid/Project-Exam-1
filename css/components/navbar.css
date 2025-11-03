@@ -1,5 +1,3 @@
-@import url(./variables.css);
-
 /* Navigation Desktop*/
 
 .nav-logo {
@@ -28,10 +26,4 @@
 
 .nav-links i {
   color: var(--primary-text);
-}
-
-.logo-text {
-  text-align: center;
-  font-size: 36px;
-  letter-spacing: 20%;
 }

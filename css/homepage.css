@@ -1,0 +1,7 @@
+@import url(./variables.css);
+
+.logo-text {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 20%;
+}
