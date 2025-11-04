@@ -35,8 +35,14 @@ export async function fetchAndRenderImages() {
     const response = await fetch(api);
     const result = await response.json();
 
-    const images = result.data.slice(12, 15).map((item) => item.image.url);
-    return images;
+    const products = result.data.slice(12, 15).map((product) => ({
+      id: product.id,
+      title: product.title,
+      image: product.image?.url,
+      alt: product.image?.alt || product.title || "Product image",
+    }));
+
+    return products;
   } catch (error) {
     console.error("Error fetching images:", error);
     return [];

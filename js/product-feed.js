@@ -1,7 +1,7 @@
 import { fetchAllProducts, fetchAndRenderImages } from "./api.js";
 
 async function createImageSlider() {
-  const images = await fetchAndRenderImages();
+  const products = await fetchAndRenderImages();
   const slider = document.getElementById("slider");
   const controls = document.querySelector(".carousel-controls");
   const prevBtn = document.querySelector(".prev-btn");
@@ -10,29 +10,35 @@ async function createImageSlider() {
 
   controls.append(prevBtn, buyBtn, nextBtn);
 
-  images.forEach((src) => {
+  products.forEach((product) => {
     const img = document.createElement("img");
-    img.src = src;
+    img.src = product.image;
     img.alt = "Product image";
+
     slider.appendChild(img);
   });
 
-  buyBtn.addEventListener("click", () => {
-    // TODO: Implement buy button functionality here
-  });
+  function update() {
+    const currentProduct = products[currentIndex];
+    buyBtn.href = `product.html?id=${encodeURIComponent(currentProduct.id)}`;
+    buyBtn.setAttribute("aria-label", `Buy ${currentProduct.title}`);
+  }
 
   let currentIndex = 0;
-  const total = images.length;
+  const total = products.length;
 
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % total;
+  function goToSlide(index) {
+    currentIndex = (index + total) % total;
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-  });
+    update();
+  }
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + total) % total;
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-  });
+  goToSlide(0);
+
+  nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
+  prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+
+  setInterval(() => goToSlide(currentIndex + 1), 6000);
 }
 
 createImageSlider();
