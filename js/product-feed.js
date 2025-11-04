@@ -1,17 +1,4 @@
-import { fetchAllProducts } from "./api.js";
-
-async function fetchAndRenderImages() {
-  try {
-    const response = await fetch("https://v2.api.noroff.dev/online-shop");
-    const result = await response.json();
-
-    const images = result.data.slice(12, 15).map((item) => item.image.url);
-    return images;
-  } catch (error) {
-    console.error("Error fetching images:", error);
-    return [];
-  }
-}
+import { fetchAllProducts, fetchAndRenderImages } from "./api.js";
 
 async function createImageSlider() {
   const images = await fetchAndRenderImages();
