@@ -27,3 +27,18 @@
 .nav-links i {
   color: var(--primary-text);
 }
+
+.nav-mobile {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-24);
+  }
+}
