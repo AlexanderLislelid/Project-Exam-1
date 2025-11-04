@@ -1,7 +1,9 @@
+const api = "https://v2.api.noroff.dev/online-shop";
+
 const productPage = document.querySelector(".products");
 export async function fetchAllProducts() {
   try {
-    const response = await fetch("https://v2.api.noroff.dev/online-shop");
+    const response = await fetch(api);
     const result = await response.json();
     const products = result.data;
 
@@ -11,7 +13,7 @@ export async function fetchAllProducts() {
       const title = document.createElement("p");
       const price = document.createElement("p");
 
-      card.href = `product.html?id=${encodeURIComponent(product.id)}`;
+      card.href = `product.html?id=${product.id}`;
       card.className = "products-card";
       img.src = product.image.url;
       img.className = "product-images";
@@ -25,5 +27,18 @@ export async function fetchAllProducts() {
     });
   } catch (error) {
     console.log(error, "failed to fetch Products");
+  }
+}
+
+export async function fetchAndRenderImages() {
+  try {
+    const response = await fetch(api);
+    const result = await response.json();
+
+    const images = result.data.slice(12, 15).map((item) => item.image.url);
+    return images;
+  } catch (error) {
+    console.error("Error fetching images:", error);
+    return [];
   }
 }
