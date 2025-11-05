@@ -1,4 +1,59 @@
-import { fetchAllProducts, fetchAndRenderImages } from "./api.js";
+import { showLoader, hideLoader } from "./utils/loader.js";
+
+const api = "https://v2.api.noroff.dev/online-shop";
+
+const productPage = document.querySelector(".products");
+export async function fetchAllProducts() {
+  showLoader();
+
+  try {
+    const response = await fetch(api);
+    const result = await response.json();
+    const products = result.data;
+
+    productPage.innerHTML = "";
+
+    products.forEach((product) => {
+      const card = document.createElement("a");
+      const img = document.createElement("img");
+      const title = document.createElement("p");
+      const price = document.createElement("p");
+
+      card.href = `product.html?id=${product.id}`;
+      card.className = "products-card";
+      img.src = product.image.url;
+      img.className = "product-images";
+      title.textContent = product.title;
+      price.textContent = `${product.price} kr`;
+
+      card.append(title, img, price);
+      productPage.appendChild(card);
+    });
+  } catch (error) {
+    console.log(error, "failed to fetch Products");
+  } finally {
+    hideLoader();
+  }
+}
+
+export async function fetchAndRenderImages() {
+  try {
+    const response = await fetch(api);
+    const result = await response.json();
+
+    const products = result.data.slice(12, 15).map((product) => ({
+      id: product.id,
+      title: product.title,
+      image: product.image?.url,
+      alt: product.image?.alt || product.title || "Product image",
+    }));
+
+    return products;
+  } catch (error) {
+    console.error("Error fetching images:", error);
+    return [];
+  }
+}
 
 async function createImageSlider() {
   const products = await fetchAndRenderImages();

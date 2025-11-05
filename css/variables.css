@@ -1,7 +1,7 @@
 :root {
   /* Typography */
 
-  --font-family-heading: "Manrope", "Inter", sans-serif;
+  --font-family-heading: "Manrope", sans-serif;
   --font-family-body: "Inter", "Montserrat", sans-serif;
 
   /* Font sizes */
