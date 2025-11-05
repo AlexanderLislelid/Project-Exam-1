@@ -1,26 +1,41 @@
 :root {
   /* Typography */
 
+  --font-family-heading: "Manrope", "Inter", sans-serif;
+  --font-family-body: "Inter", "Montserrat", sans-serif;
+
   /* Font sizes */
 
+  --font-size-h1: 22px;
+  --font-size-h2: 20px;
+  --font-size-h3: 18px;
+
+  --font-size-nav-desktop: 20px;
+  --font-size-nav-mobile: 16px;
+
+  --font-size-button-desktop: 20px;
+  --font-size-button-mobile: 18px;
+
   /* Font-weights */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   /* Colors */
   --primary-background: #faf9f6; /* Off white background color */
   --section-background: #f3f2ef; /* Light Gray background for forms etc */
+
   --primary-text: #1c1c1c; /* Primary text color */
   --secondary-text: #5a5a5a; /* Secondary text color, for placeholder text etc */
+
   --border-color: #e4e2dd; /* Border Color */
+
   --nav-hover: #c29a3c; /* muted gold */
 
-  /*
-
-    Fill in later
-
-  --acccent-color: 
-  --accent-color-hover:
-  --accent-color-alt:
-  */
+  --button-color: #b8a36a; /* Button color */
+  --button-hover: #cbbfa2; /* Button color on hover */
 
   /* Spacing */
 

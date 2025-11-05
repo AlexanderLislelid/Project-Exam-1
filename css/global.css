@@ -18,7 +18,7 @@ a {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-body);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -37,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-family-heading);
   color: var(--primary-text);
 }
 
