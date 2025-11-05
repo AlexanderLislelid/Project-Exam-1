@@ -31,6 +31,34 @@
 .nav-mobile {
   display: none;
 }
+/* Overlay on mobile */
+
+.nav-overlay {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  z-index: 1000;
+
+  /* Glass-effect */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-medium);
+
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 16px 0;
+  gap: 12px;
+  border-radius: 0 0 5px 5px;
+}
+
+.nav-overlay a {
+  display: block;
+  padding: 8px 0;
+}
 
 @media (max-width: 650px) {
   .nav-desktop {
@@ -39,6 +67,7 @@
   .nav-mobile {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: var(--spacing-24);
   }
 }

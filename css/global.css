@@ -49,3 +49,7 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+
+.nav-overlay {
+  display: none;
+}
