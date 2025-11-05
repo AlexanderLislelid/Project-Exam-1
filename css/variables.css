@@ -46,6 +46,8 @@
   --spacing-40: 40px; /* Layout padding, major section gaps */
   --spacing-48: 48px; /* Page-level padding for structure*/
 
+  --padding-button: 10px 40px; /* Standard Button padding */
+
   /* Shadows */
   --shadow-light: 0 2px 4px #00000014; /* Svært subtil – t.d. for kort og inputs */
   --shadow-medium: 0 4px 8px #0000001a; /* Vanlig dybde for kort, modaler */
