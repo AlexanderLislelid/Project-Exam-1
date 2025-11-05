@@ -30,10 +30,11 @@
       name="description"
       content="Create your Plethora account to track orders, save favorites, and access exclusive offers on modern essentials."
     />
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/components/navbar.css" />
-    <link rel="stylesheet" href="./css/components/footer.css" />
-    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/components/navbar.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/homepage.css" />
+    <script type="module" src="../js/nav.js"></script>
   </head>
   <body>
     <nav class="nav-desktop">
@@ -59,12 +60,22 @@
       </ul>
     </nav>
     <div class="nav-mobile">
-      <li><i class="fa-solid fa-bars fa-lg"></i></li>
-      <li>
+      <i class="fa-solid fa-bars fa-lg" id="nav-toggle"></i>
         <a href="../cart.html"
           ><i class="fa-solid fa-cart-shopping fa-lg"></i
         ></a>
-      </li>
+    </div>
+    <div class="nav-overlay">
+      <ul>
+        <li><a href="../shop.html">Shop</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li>
+          <a href="./login.html"
+            ></i>Account</a
+          >
+        </li>
+      </ul>
     </div>
     <main></main>
     <footer>
