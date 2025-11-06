@@ -24,9 +24,12 @@ export async function fetchAllProducts() {
       img.src = product.image.url;
       img.className = "product-images";
       title.textContent = product.title;
-      price.textContent = `${product.price} kr`;
+      price.innerHTML = `<span class="price-amount">${product.price}</span><span class="price-currency"> kr</span>`;
 
-      card.append(title, img, price);
+      price.className = "product-price";
+      title.className = "product-title";
+
+      card.append(img, title, price);
       productPage.appendChild(card);
     });
   } catch (error) {

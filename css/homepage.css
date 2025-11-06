@@ -97,6 +97,27 @@
   box-shadow: var(--shadow-light);
 }
 
+.products-card:hover,
+.products-card:focus {
+  scale: 103%;
+  box-shadow: var(--shadow-medium);
+}
+
+.product-title {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-light);
+  margin-top: 5px;
+}
+.product-price {
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 5px;
+}
+/* .price-currency {
+  font-weight: 300;
+  font-size: 0.9em;
+} */
+
 @media (max-width: 900px) {
   .products {
     grid-template-columns: repeat(3, 200px);
