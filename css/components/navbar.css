@@ -37,14 +37,15 @@
   display: none;
   width: 100%;
   position: absolute;
-  top: 50px;
+  top: 52px;
   z-index: 1000;
+  position: sticky; /* Fine tune or remove */
 
   /* Glass-effect */
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
 
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.3); */
   box-shadow: var(--shadow-medium);
 
   justify-content: center;
@@ -60,6 +61,11 @@
   padding: 8px 0;
 }
 
+.active-page-mobile {
+  color: var(--nav-hover);
+  /* background-color: rgba(255, 255, 255, 0.3); Fine tune or remove */
+}
+
 @media (max-width: 650px) {
   .nav-desktop {
     display: none;
@@ -68,6 +74,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-24);
+    padding: var(--spacing-16);
+    position: sticky; /* Fine tune or remove */
+    top: 0; /* Fine tune or remove */
+    z-index: 1000;
+    background: var(--primary-background);
   }
 }
