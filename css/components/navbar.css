@@ -75,8 +75,10 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-16);
-    position: sticky; /* Fine tune or remove */
+    position: fixed; /* Fine tune or remove */
     top: 0; /* Fine tune or remove */
+    left: 0;
+    right: 0;
     z-index: 1000;
     background: var(--primary-background);
   }
