@@ -106,3 +106,9 @@ button {
     display: none;
   }
 }
+
+/* Stars */
+
+.fa-solid.fa-star {
+  color: var(--nav-hover);
+}
