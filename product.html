@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/components/navbar.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
-    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/single-product.css" />
     <script type="module" src="./js/nav.js"></script>
     <script type="module" src="./js/single-product.js"></script>
   </head>
@@ -81,9 +81,19 @@
       <p class="breadcrumbs-active-page">Product</p>
     </div>
     <main>
-      <div id="product-wrapper">
-        <div id="title"></div>
-        <div id="description"></div>
+      <div id="product-wrapper" class="product-wrapper">
+        <div id="title" class="product-title"></div>
+        <div id="description" class="product-description">
+          <div id="description-text">
+            <h2 class="product-description__titles">Description:</h2>
+          </div>
+          <div id="description-price">
+            <h2 class="product-description__titles">Price:</h2>
+          </div>
+          <div id="description-rating">
+            <h2 class="product-description__titles">User Rating:</h2>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
