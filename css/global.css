@@ -87,3 +87,22 @@ button {
     transform: rotate(360deg);
   }
 }
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  display: flex;
+  gap: var(--spacing-24);
+  margin: var(--spacing-24) 0 var(--spacing-48) var(--spacing-48);
+  align-items: center;
+}
+
+.breadcrumbs-active-page {
+  color: var(--nav-hover);
+}
+
+@media (max-width: 650px) {
+  .breadcrumbs {
+    display: none;
+  }
+}
