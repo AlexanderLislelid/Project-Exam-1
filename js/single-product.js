@@ -5,6 +5,12 @@ async function renderSingleProduct() {
     const response = await fetch(`https://v2.api.noroff.dev/online-shop/${id}`);
     const product = await response.json();
     console.log(product);
+
+    const wrapper = document.getElementById("product-wrapper");
+    const imageAndTitleWrapper = document.getElementById("title");
+    const descriptionWrapper = document.getElementById("description");
+
+    const title = product.title;
   } catch (error) {
     console.log(error, "Could not Find product");
   }
