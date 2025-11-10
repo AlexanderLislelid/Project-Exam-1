@@ -1,6 +1,7 @@
+import { showLoader, hideLoader } from "../js/utils/loader.js";
 async function renderSingleProduct() {
   const id = new URLSearchParams(window.location.search).get("id");
-
+  showLoader();
   try {
     const response = await fetch(`https://v2.api.noroff.dev/online-shop/${id}`);
     const result = await response.json();
@@ -89,6 +90,8 @@ async function renderSingleProduct() {
     });
   } catch (error) {
     console.log(error, "Could not Find product");
+  } finally {
+    hideLoader();
   }
 }
 renderSingleProduct();
