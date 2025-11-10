@@ -112,3 +112,6 @@ button {
 .fa-solid.fa-star {
   color: var(--nav-hover);
 }
+.fa-regular.fa-star {
+  color: var(--secondary-text);
+}

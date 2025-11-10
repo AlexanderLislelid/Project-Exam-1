@@ -1,9 +1,9 @@
-/* Layout */
+/* Product Layout */
 
 .product-wrapper {
   display: flex;
   gap: var(--spacing-48);
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 0 var(--spacing-48);
 }
 
@@ -12,16 +12,51 @@
   flex-direction: column;
   margin-top: 60px;
   gap: var(--spacing-24);
+  width: 250px;
 }
 
 .product-title img {
   width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  /* box-shadow: var(--shadow-medium); */
 }
 
 #description-text h2,
 #description-price h2,
 #description-rating h2 {
   margin-bottom: var(--spacing-8);
+}
+
+/* Review Layout */
+
+#review-wrapper {
+  padding: var(--spacing-24);
+  background-color: var(--section-background);
+  border: 2px solid var(--border-color);
+  margin: var(--spacing-48) var(--spacing-24) var(--spacing-48);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#review-wrapper > *:first-child {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  margin: var(--spacing-16);
+  width: 250px;
+}
+
+.review-card p {
+  background-color: var(--secondary-text);
+  padding: var(--spacing-16);
+  color: var(--primary-background);
+  box-shadow: var(--shadow-medium);
+  border-radius: 5px;
 }
 
 /* Typography */
@@ -32,6 +67,11 @@
 
 .product-description__titles {
   font-size: var(--font-size-h2);
+}
+
+.review-card h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-regular);
 }
 
 /* Button */
@@ -51,15 +91,37 @@
   scale: 103%;
 }
 
+@media (max-width: 930px) {
+  #review-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 650px) {
   .product-wrapper {
     flex-direction: column;
     margin: 100px var(--spacing-24) var(--spacing-48);
+    align-items: flex-start;
   }
+
   .product-description {
     display: flex;
     flex-direction: column;
     margin-top: var(--spacing-8);
     gap: var(--spacing-16);
+  }
+
+  #review-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .product-title img {
+    width: 100%;
+  }
+
+  .review-card {
+    width: 200px;
   }
 }

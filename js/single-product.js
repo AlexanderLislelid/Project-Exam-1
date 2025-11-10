@@ -35,7 +35,6 @@ async function renderSingleProduct() {
     }
 
     const rating = document.createElement("p");
-    // rating.textContent = `Rating: ${product.rating}`;
     rating.innerHTML = `${product.rating} / 5 <i class="fa-solid fa-star"></i> `;
 
     const buyBtn = document.createElement("button");
@@ -45,6 +44,7 @@ async function renderSingleProduct() {
     wrapper.append(imageAndTitleWrapper, descriptionWrapper);
 
     imageAndTitleWrapper.append(title, image);
+
     descriptionWrapper.append(
       descriptionText,
       descriptionPrice,
@@ -55,6 +55,38 @@ async function renderSingleProduct() {
     descriptionText.append(description);
     descriptionPrice.append(price);
     descriptionRating.append(rating);
+
+    //reviews
+    const reviewWrapper = document.getElementById("review-wrapper");
+
+    if (product.reviews.length < 1) {
+      reviewWrapper.innerHTML = "No reviews yet!";
+    }
+    product.reviews.forEach((reviewer) => {
+      const reviewCard = document.createElement("div");
+      reviewCard.className = "review-card";
+
+      const starsWrapper = document.createElement("div");
+      const rating = Math.round(reviewer.rating);
+      for (let i = 0; i < 5; i++) {
+        const star = document.createElement("i");
+        if (i < rating) {
+          star.className = "fa-solid fa-star";
+        } else {
+          star.className = "fa-regular fa-star";
+        }
+        starsWrapper.append(star);
+      }
+
+      const reviewerName = document.createElement("h3");
+      reviewerName.textContent = reviewer.username;
+
+      const review = document.createElement("p");
+      review.textContent = reviewer.description;
+
+      reviewCard.append(reviewerName, review, starsWrapper);
+      reviewWrapper.append(reviewCard);
+    });
   } catch (error) {
     console.log(error, "Could not Find product");
   }
