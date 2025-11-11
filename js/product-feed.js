@@ -27,6 +27,11 @@ export async function fetchAllProducts() {
       price.innerHTML = `<span class="price-amount">${product.price}</span><span class="price-currency"> kr</span>`;
 
       price.className = "product-price";
+      if (product.price === product.discountedPrice) {
+        price.textContent = `${product.price} kr`;
+      } else {
+        price.textContent = `On sale: ${product.discountedPrice} kr`;
+      }
       title.className = "product-title";
 
       card.append(img, title, price);
