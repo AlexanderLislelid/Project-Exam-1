@@ -91,6 +91,23 @@
   scale: 103%;
 }
 
+/* Share Icon */
+
+.fa-solid.fa-share {
+  margin-top: var(--spacing-16);
+  cursor: pointer;
+  color: var(--button-color);
+  font-size: 1.7rem;
+}
+
+.fa-solid.fa-share:hover,
+.fa-solid.fa-share:focus {
+  scale: 120%;
+  color: var(--button-hover);
+}
+
+/* Smaller screens Layout */
+
 @media (max-width: 930px) {
   #review-wrapper {
     grid-template-columns: repeat(2, 1fr);

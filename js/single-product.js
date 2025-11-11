@@ -42,6 +42,38 @@ async function renderSingleProduct() {
     buyBtn.className = "buy-button";
     buyBtn.textContent = "Buy Now";
 
+    //share button
+    const shareBtn = document.createElement("i");
+    shareBtn.className = "fa-solid fa-share";
+    shareBtn.setAttribute("aria-label", "Share this product");
+
+    const shareData = {
+      title: "Plethora online shop",
+      text: "Check out this product",
+      url: window.location.href,
+    };
+
+    //share if supported, otherwise copy link
+    shareBtn.addEventListener("click", async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          console.log("Shared successfully!");
+        } catch (error) {
+          console.warn("Share canceled or failed:", error);
+        }
+      } else {
+        try {
+          await navigator.clipboard.writeText(shareData.url);
+          alert("Link copied to clipboard!");
+        } catch (err) {
+          console.error("Clipboard copy failed:", err);
+          alert("Sharing not supported on this device.");
+        }
+      }
+    });
+
+    //Adding elements to page
     wrapper.append(imageAndTitleWrapper, descriptionWrapper);
 
     imageAndTitleWrapper.append(title, image);
@@ -55,7 +87,7 @@ async function renderSingleProduct() {
 
     descriptionText.append(description);
     descriptionPrice.append(price);
-    descriptionRating.append(rating);
+    descriptionRating.append(rating, shareBtn);
 
     //reviews
     const reviewWrapper = document.getElementById("review-wrapper");
