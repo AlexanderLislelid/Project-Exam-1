@@ -4,7 +4,7 @@ export function isAdminLoggedIn() {
 
 export function requireAdminLogin() {
   if (!isAdminLoggedIn()) {
-    window.location.href = "login.html";
+    window.location.href = "../account/login.html";
   }
 }
 
