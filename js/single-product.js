@@ -1,4 +1,6 @@
 import { showLoader, hideLoader } from "../js/utils/loader.js";
+import { addToCart } from "../js/utils/cartfunctions.js";
+import { isAdminLoggedIn } from "../js/utils/auth.js";
 async function renderSingleProduct() {
   const id = new URLSearchParams(window.location.search).get("id");
   showLoader();
@@ -41,6 +43,32 @@ async function renderSingleProduct() {
     const buyBtn = document.createElement("button");
     buyBtn.className = "buy-button";
     buyBtn.textContent = "Buy Now";
+
+    //add product to cart/require admin login
+    buyBtn.addEventListener("click", () => {
+      if (isAdminLoggedIn()) {
+        addToCart(product);
+        buyBtn.textContent = "Added!";
+
+        // Create and show a toast notification
+        const toast = document.createElement("div");
+        toast.textContent = "Product added to cart";
+        toast.className = "toast-message";
+        document.body.appendChild(toast);
+        setTimeout(() => {
+          buyBtn.textContent = "Buy Now";
+          toast.remove();
+        }, 1500);
+      } else {
+        const toast = document.createElement("div");
+        toast.textContent = "Please log in to purchase products!";
+        toast.className = "toast-message";
+        document.body.appendChild(toast);
+        setTimeout(() => {
+          toast.remove();
+        }, 3000);
+      }
+    });
 
     //share button
     const shareBtn = document.createElement("i");

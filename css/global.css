@@ -115,3 +115,19 @@ button {
 .fa-regular.fa-star {
   color: var(--secondary-text);
 }
+
+/* Toast message */
+
+.toast-message {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  padding: var(--spacing-16);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-medium);
+  padding: var(--spacing-16);
+  border-radius: 5px;
+}

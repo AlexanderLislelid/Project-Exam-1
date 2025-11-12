@@ -1,13 +1,13 @@
-const CART_KEY = "cart";
+const shoppingCart = "cart";
 
 // Lagre handlekurven
 function saveCart(cart) {
-  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  localStorage.setItem(shoppingCart, JSON.stringify(cart));
 }
 
 // Hent handlekurven fra localStorage
 export function getCart() {
-  return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+  return JSON.parse(localStorage.getItem(shoppingCart)) || [];
 }
 
 // Legg til et produkt
@@ -25,5 +25,5 @@ export function removeFromCart(productId) {
 
 // Tøm handlekurven
 export function clearCart() {
-  localStorage.removeItem(CART_KEY);
+  localStorage.removeItem(shoppingCart);
 }
