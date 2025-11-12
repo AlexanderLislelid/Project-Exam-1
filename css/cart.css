@@ -1,0 +1,10 @@
+/* Layout */
+
+.cart-title {
+  margin-left: var(--spacing-48);
+}
+
+#cart-wrapper {
+  background-color: aquamarine;
+  padding: 48px;
+}

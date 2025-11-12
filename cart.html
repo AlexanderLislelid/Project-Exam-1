@@ -33,8 +33,9 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/components/navbar.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
-    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
     <script type="module" src="./js/nav.js"></script>
+    <script type="module" src="./js/cart.js"></script>
   </head>
   <body>
     <nav class="nav-desktop">
@@ -78,7 +79,12 @@
       <i class="fa-solid fa-arrow-right"></i>
       <p class="breadcrumbs-active-page">Cart</p>
     </div>
-    <main></main>
+    <main>
+      <h1 class="cart-title">Your cart</h1>
+      <div id="cart-wrapper">
+        <div id="cart-item"></div>
+      </div>
+    </main>
     <footer>
       <div class="footer-links">
         <a href="./index.html">

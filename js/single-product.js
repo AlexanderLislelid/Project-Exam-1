@@ -46,7 +46,8 @@ async function renderSingleProduct() {
 
     //add product to cart/require admin login
     buyBtn.addEventListener("click", () => {
-      if (isAdminLoggedIn()) {
+      if (!isAdminLoggedIn()) {
+        // isAdminLoggedIn() remember to change!!!!!
         addToCart(product);
         buyBtn.textContent = "Added!";
 
