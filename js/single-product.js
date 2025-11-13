@@ -28,6 +28,7 @@ async function renderSingleProduct() {
     const image = document.createElement("img");
     image.src = product.image.url;
     image.alt = product.image.alt;
+    image.className = "cart-image";
 
     const price = document.createElement("p");
 

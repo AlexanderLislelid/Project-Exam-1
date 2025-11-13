@@ -13,14 +13,34 @@ export function getCart() {
 // Legg til et produkt
 export function addToCart(product) {
   const cart = getCart();
-  cart.push(product);
+
+  const existing = cart.find((item) => item.id === product.id);
+
+  if (existing) {
+    existing.quantity = (existing.quantity || 1) + 1;
+  } else {
+    cart.push({
+      ...product,
+      quantity: 1,
+    });
+  }
   saveCart(cart);
 }
 
 // Fjern et produkt
 export function removeFromCart(productId) {
-  const cart = getCart().filter((item) => item.id !== productId);
-  saveCart(cart);
+  const cart = getCart();
+
+  const item = cart.find((i) => i.id === productId);
+  if (!item) return;
+
+  if (item.quantity > 1) {
+    item.quantity -= 1;
+    saveCart(cart);
+  } else {
+    const updated = cart.filter((i) => i.id !== productId);
+    saveCart(updated);
+  }
 }
 
 // Tøm handlekurven

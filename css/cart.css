@@ -5,6 +5,36 @@
 }
 
 #cart-wrapper {
-  background-color: aquamarine;
-  padding: 48px;
+  background-color: var(--section-background);
+  border: 2px solid var(--border-color);
+  padding: var(--spacing-48);
+  margin: var(--spacing-24) var(--spacing-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+}
+
+/* Cart items */
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cart-item img {
+  width: 100px;
+}
+
+.checkout-button {
+  padding: var(--padding-button);
+  background-color: var(--button-color);
+}
+
+/* Mobile screens */
+
+@media (max-width: 650px) {
+  main {
+    margin-top: 80px; /* just to bump h1 down below the navbar */
+  }
 }
