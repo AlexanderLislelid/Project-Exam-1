@@ -43,6 +43,7 @@ async function renderCart() {
       cartTotal += item.quantity * unitPrice;
 
       // quantity
+
       const qtyWrapper = document.createElement("div");
       const increase = document.createElement("button");
       const qty = document.createElement("p");
@@ -51,8 +52,8 @@ async function renderCart() {
 
       qty.textContent = item.quantity;
 
-      increase.textContent = "+";
-      decrease.textContent = "-";
+      increase.className = "fa-solid fa-plus";
+      decrease.className = "fa-solid fa-minus";
 
       increase.addEventListener("click", () => {
         addToCart(item);
@@ -93,13 +94,14 @@ async function renderCart() {
     // element for total sum
     const totalPrice = document.createElement("p");
     totalPrice.id = "cart-total";
+    totalPrice.className = "total-sum";
     totalPrice.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
 
     const buttons = document.createElement("div");
     buttons.className = "cart-buttons";
 
     const chekoutBtn = document.createElement("a");
-    chekoutBtn.textContent = "Proceed to checkout";
+    chekoutBtn.textContent = "Checkout";
     chekoutBtn.href = "../checkout.html";
     chekoutBtn.className = "checkout-button";
 
