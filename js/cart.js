@@ -7,6 +7,8 @@ import {
 import { showLoader, hideLoader } from "./utils/loader.js";
 
 async function renderCart() {
+  showLoader();
+
   let cart = await getCart();
   const cartWrapper = document.getElementById("cart-wrapper");
 
@@ -45,6 +47,7 @@ async function renderCart() {
       const increase = document.createElement("button");
       const qty = document.createElement("p");
       const decrease = document.createElement("button");
+      qtyWrapper.className = "qty-wrapper";
 
       qty.textContent = item.quantity;
 
@@ -60,7 +63,7 @@ async function renderCart() {
         )} kr`;
 
         cartTotal += unitPrice;
-        totalElement.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
+        totalPrice.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
       });
 
       decrease.addEventListener("click", () => {
@@ -74,10 +77,10 @@ async function renderCart() {
           )} kr`;
 
           cartTotal -= unitPrice;
-          totalElement.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
+          totalPrice.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
         } else {
           cartTotal -= unitPrice;
-          totalElement.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
+          totalPrice.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
           itemWrapper.remove();
         }
       });
@@ -88,18 +91,39 @@ async function renderCart() {
     });
 
     // element for total sum
-    const totalElement = document.createElement("p");
-    totalElement.id = "cart-total";
-    totalElement.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
+    const totalPrice = document.createElement("p");
+    totalPrice.id = "cart-total";
+    totalPrice.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
+
+    const buttons = document.createElement("div");
+    buttons.className = "cart-buttons";
 
     const chekoutBtn = document.createElement("a");
     chekoutBtn.textContent = "Proceed to checkout";
     chekoutBtn.href = "../checkout.html";
     chekoutBtn.className = "checkout-button";
 
-    cartWrapper.append(totalElement, chekoutBtn);
+    const clearBtn = document.createElement("button");
+    clearBtn.textContent = "Clear Cart";
+    clearBtn.className = "clear-button";
+
+    if (cart.length < 1) {
+      chekoutBtn.textContent = "Continue shopping";
+      chekoutBtn.href = "../index.html";
+      clearBtn.style.display = "none";
+    }
+
+    buttons.append(chekoutBtn, clearBtn);
+    cartWrapper.append(totalPrice, buttons);
+
+    clearBtn.addEventListener("click", () => {
+      clearCart();
+      renderCart();
+    });
   } catch (error) {
     console.error("Failed to render cart", error);
+  } finally {
+    hideLoader();
   }
 }
 

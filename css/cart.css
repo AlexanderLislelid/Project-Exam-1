@@ -20,13 +20,36 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: flex-start;
+  padding-bottom: var(--spacing-16);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.cart-item-title {
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
 }
 
 .cart-item img {
-  width: 100px;
+  width: 80px;
+  height: 80px;
+  box-shadow: var(--shadow-medium);
+}
+.qty-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-8);
 }
 
-.checkout-button {
+/* Buttons */
+
+.cart-buttons {
+  display: flex;
+  gap: var(--spacing-24);
+}
+
+.checkout-button,
+.clear-button {
   padding: var(--padding-button);
   background-color: var(--button-color);
 }

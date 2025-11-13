@@ -50,7 +50,7 @@
 
   /* Shadows */
   --shadow-light: 0 2px 4px #00000014; /* Svært subtil – t.d. for kort og inputs */
-  --shadow-medium: 0 4px 8px #0000001a; /* Vanlig dybde for kort, modaler */
+  --shadow-medium: 0 4px 4px #0000025a; /* Vanlig dybde for kort, modaler */
   --shadow-strong: 0 8px 16px #00000026; /* Tydeleg dybde – hero-seksjon, overlay */
   --shadow-hover: 0 6px 12px #00000020; /* Lett løft ved hover-effekt */
 }
