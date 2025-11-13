@@ -111,7 +111,7 @@ async function renderCart() {
 
     if (cart.length < 1) {
       chekoutBtn.textContent = "Continue shopping";
-      chekoutBtn.href = "../index.html";
+      chekoutBtn.href = "index.html";
       clearBtn.style.display = "none";
     }
 
