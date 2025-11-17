@@ -102,7 +102,7 @@ async function renderCart() {
 
     const chekoutBtn = document.createElement("a");
     chekoutBtn.textContent = "Checkout";
-    chekoutBtn.href = "../checkout.html";
+    chekoutBtn.href = "checkout.html";
     chekoutBtn.className = "checkout-button";
 
     const clearBtn = document.createElement("button");
