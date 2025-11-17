@@ -1,0 +1,54 @@
+/* Layout */
+
+.checkout-title {
+  margin-left: var(--spacing-48);
+}
+
+.checkout-form {
+  background-color: var(--section-background);
+  border: 2px solid var(--border-color);
+  padding: var(--spacing-48);
+}
+
+.checkout-form__userinfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.checkout-form__userinfo label,
+.checkout__section label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+.checkout-form__userinfo input,
+.checkout__section input {
+  max-width: 250px;
+  height: 35px;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-background);
+  border: 2px solid var(--border-color);
+}
+
+.checkout-form select {
+  max-width: 250px;
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background-color: var(--primary-background);
+  border: 2px solid var(--border-color);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* Error msg  - Remember to adjust values in here - remove this comment when done */
+.checkout-error {
+  display: none; /* hidden by default */
+  background-color: #ffebeb;
+  color: #b31919;
+  border: 1px solid #e4a1a1;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}

@@ -33,8 +33,9 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/components/navbar.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
-    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
     <script type="module" src="./js/nav.js"></script>
+    <script type="module" src="./js/checkout.js"></script>
   </head>
   <body>
     <nav class="nav-desktop">
@@ -65,6 +66,7 @@
     </div>
     <div class="nav-overlay">
       <ul>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./shop.html">Shop</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./contact.html">Contact</a></li>
@@ -73,7 +75,115 @@
         </li>
       </ul>
     </div>
-    <main></main>
+    <div class="breadcrumbs">
+      <a href="./index.html">Home</a>
+      <i class="fa-solid fa-arrow-right"></i>
+      <a href="./cart.html">Cart</a>
+      <i class="fa-solid fa-arrow-right"></i>
+      <p class="breadcrumbs-active-page">Checkout</p>
+    </div>
+    <main>
+      <section class="checkout">
+        <h1 class="checkout-title">Checkout</h1>
+        <p class="checkout-error" id="checkoutError">
+          Please fill in all required fields correctly.
+        </p>
+        <form class="checkout-form" id="checkoutForm" novalidate>
+          <div class="checkout-form__userinfo">
+            <label>
+              First Name
+              <input
+                type="text"
+                name="firstName"
+                autocomplete="given-name"
+                required
+              />
+            </label>
+
+            <label>
+              Last Name
+              <input
+                type="text"
+                name="lastName"
+                autocomplete="family-name"
+                required
+              />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <label>
+              Street address
+              <input type="text" name="address" required />
+            </label>
+
+            <label>
+              Country
+              <select name="country" required autocomplete="country">
+                <option value="">Select a country</option>
+                <option value="Norway">Norway</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Finland">Finland</option>
+                <option value="Iceland">Iceland</option>
+              </select>
+            </label>
+
+            <label>
+              Postal code
+              <input type="text" name="zip" required />
+            </label>
+
+            <label>
+              Phone Number:
+              <input type="tel" name="phone" required />
+            </label>
+          </div>
+
+          <!-- Payment -->
+          <div class="checkout__section">
+            <h2>Payment Details</h2>
+
+            <label>
+              Cardholder name
+              <input type="text" name="cardName" required />
+            </label>
+
+            <label>
+              Card number
+              <input
+                type="text"
+                inputmode="numeric"
+                name="cardNumber"
+                required
+              />
+            </label>
+
+            <div class="checkout__row">
+              <label>
+                Expiry (MM/YY)
+                <input type="text" name="expiry" required />
+              </label>
+
+              <label>
+                CVV
+                <input type="text" name="cvv" required />
+              </label>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="checkout__buttons">
+            <button type="submit" class="checkout-btn">
+              Complete Purchase
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
     <footer>
       <div class="footer-links">
         <a href="./index.html">
@@ -97,5 +207,7 @@
       </div>
       <p>&copy; 2025 Plethora. All rights reserved.</p>
     </footer>
+    <!-- <div id="page-loader" class="page-loader is-visible">
+      <div class="loader"></div> -->
   </body>
 </html>
