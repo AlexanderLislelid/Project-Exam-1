@@ -1,0 +1,93 @@
+/* Layout */
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  padding: var(--spacing-24) var(--spacing-48);
+  background-color: var(--section-background);
+  border: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  align-items: center;
+}
+
+/* Typography */
+
+.login-form h1 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+/* Inputs with icons */
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group input {
+  width: 100%;
+  max-width: 280px;
+  height: 40px;
+  padding-left: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  background-color: var(--primary-background);
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 18px;
+  color: #cbbfa2;
+}
+
+/* Button */
+
+.login-btn {
+  margin-top: var(--spacing-16);
+  align-self: center;
+  max-width: 250px;
+  width: 100%;
+  padding: var(--padding-button);
+  background-color: var(--button-color);
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+  background-color: var(--button-hover);
+  box-shadow: var(--shadow-medium);
+  scale: 1.03;
+}
+
+/* Smaller screens */
+
+@media (max-width: 650px) {
+  .login-form {
+    margin-top: 140px;
+  }
+}

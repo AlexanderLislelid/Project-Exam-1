@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/components/navbar.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
-    <link rel="stylesheet" href="../css/homepage.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <script type="module" src="../js/nav.js"></script>
   </head>
   <body>
@@ -73,7 +73,46 @@
         </li>
       </ul>
     </div>
-    <main></main>
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a>
+      <i class="fa-solid fa-arrow-right"></i>
+      <p class="breadcrumbs-active-page">Login</p>
+    </div>
+    <main>
+      <section class="login-box">
+        <form id="login" class="login-form" novalidate>
+          <h1>Login</h1>
+          <div class="input-group">
+            <label for="email" class="visually-hidden">Email</label>
+            <i class="fa-solid fa-envelope input-icon"></i>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              inputmode="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="password" class="visually-hidden">Password</label>
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="login-btn">Log In</button>
+        </form>
+      </section>
+    </main>
     <footer>
       <div class="footer-links">
         <a href="../index.html">
