@@ -56,6 +56,16 @@
   margin-top: var(--spacing-48);
 }
 
+/* Font sizes */
+
+.checkout h2 {
+  font-size: var(--font-size-h2);
+}
+
+.checkout-form h2 {
+  margin-bottom: var(--spacing-16);
+}
+
 /* Error states */
 
 .error-msg {
@@ -105,10 +115,26 @@
 .item-wrapper {
   display: flex;
   gap: var(--spacing-24);
-  justify-content: center;
-  align-items: center;
+  padding-bottom: var(--spacing-16);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .item-wrapper p {
   font-size: 0.9rem;
+  padding: 4px;
+}
+
+@media (max-width: 650px) {
+  main {
+    margin-top: 80px; /* just to bump h1 down below the navbar */
+  }
+  .checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .checkout-form {
+    /* Fix  */
+  }
 }
