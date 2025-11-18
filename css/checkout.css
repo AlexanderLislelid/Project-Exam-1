@@ -35,6 +35,11 @@
   padding-left: var(--spacing-8);
 }
 
+.input-date,
+.input-cvv {
+  width: 100px;
+}
+
 .checkout-form select {
   max-width: 250px;
   height: 35px;
@@ -124,6 +129,23 @@
   padding: 4px;
 }
 
+/* Button */
+
+.checkout-btn {
+  margin-top: var(--spacing-48);
+  padding: var(--padding-button);
+  border-radius: 5px;
+  color: white;
+  background-color: var(--button-color);
+}
+
+.checkout-btn:hover,
+.checkout-btn:focus {
+  background-color: var(--primary-text);
+  box-shadow: var(--shadow-medium);
+  scale: 102%;
+}
+
 @media (max-width: 650px) {
   main {
     margin-top: 80px; /* just to bump h1 down below the navbar */
@@ -133,8 +155,5 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .checkout-form {
-    /* Fix  */
   }
 }
