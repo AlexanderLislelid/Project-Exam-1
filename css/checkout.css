@@ -88,6 +88,14 @@
 .checkout-error {
   display: none;
   margin-left: 48px;
+  background-color: var(--input-error-bg);
+  color: #c62828;
+  border: 1px solid var(--input-error-border);
+  padding: var(--spacing-16);
+  border-radius: 5px;
+  margin: var(--spacing-24) var(--spacing-48);
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-light);
 }
 
 /* Cart */
@@ -102,7 +110,7 @@
 .checkout-cart__image {
   width: 80px;
   height: 80px;
-  box-shadow: var(--shadow-light);
+  box-shadow: var(--shadow-medium);
 }
 
 .checkout-summary {
@@ -113,7 +121,7 @@
 }
 
 .checkout-total {
-  margin-top: var(--spacing-48);
+  margin: var(--spacing-48) 0;
   font-weight: 600;
 }
 
