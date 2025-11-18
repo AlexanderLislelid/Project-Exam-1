@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/components/navbar.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
-    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/success.css" />
     <script type="module" src="./js/nav.js"></script>
   </head>
   <body>
@@ -73,7 +73,31 @@
         </li>
       </ul>
     </div>
-    <main></main>
+    <div class="breadcrumbs">
+      <a href="./index.html">Home</a>
+      <i class="fa-solid fa-arrow-right"></i>
+      <a href="./cart.html">Cart</a>
+      <i class="fa-solid fa-arrow-right"></i>
+      <a href="./checkout.html">Checkout</a>
+      <i class="fa-solid fa-arrow-right"></i>
+      <p class="breadcrumbs-active-page">Order Confirmation</p>
+    </div>
+    <main>
+      <section class="confirmation-box">
+        <div class="success-message">
+          <p>
+            Your order has been successfully placed. A confirmation email has
+            been sent to your inbox. We hope you enjoy your new essentials
+          </p>
+        </div>
+        <div class="logo">
+          <img src="./images/logo.png" class="success-logo" />
+          <p>thank you for shopping with</p>
+          <h1>PLETHORA</h1>
+        </div>
+      </section>
+      <a href="./index.html" class="home-btn">Return to Homepage</a>
+    </main>
     <footer>
       <div class="footer-links">
         <a href="./index.html">

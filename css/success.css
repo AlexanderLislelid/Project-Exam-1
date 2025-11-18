@@ -1,0 +1,60 @@
+/* Layout */
+
+.confirmation-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 80px;
+  background-color: var(--section-background);
+  padding: var(--spacing-24);
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Typography */
+
+.confirmation-box h1 {
+  font-family: var(--font-family-body);
+  font-size: 34px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 20%;
+  padding-top: var(--spacing-8);
+}
+
+/* Logo */
+
+.success-logo {
+  width: 90px;
+}
+
+/* Button */
+
+.home-btn {
+  background-color: var(--button-color);
+  color: white;
+  padding: var(--padding-button);
+  max-width: 250px;
+  border-radius: 5px;
+  display: block;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+.home-btn:hover,
+.home-btn:focus {
+  background-color: var(--button-hover);
+  box-shadow: var(--shadow-medium);
+  scale: 103%;
+}
+
+/* Smaller screens */
+
+@media (max-width: 650px) {
+  .confirmation-box {
+    margin-top: 120px;
+    max-width: fit-content;
+  }
+}
