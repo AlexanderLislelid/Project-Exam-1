@@ -22,13 +22,13 @@
   flex-direction: column;
   gap: var(--spacing-8);
 }
-.checkout-form__userinfo input,
-.checkout__section input {
+.checkout-form input {
   max-width: 250px;
   height: 35px;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   background-color: var(--primary-background);
   border: 2px solid var(--border-color);
+  padding-left: var(--spacing-8);
 }
 
 .checkout-form select {
@@ -42,13 +42,27 @@
   cursor: pointer;
 }
 
-/* Error msg  - Remember to adjust values in here - remove this comment when done */
+.checkout-form input:focus,
+.checkout-form select:focus {
+  border: 2px solid var(--input-focus-border);
+  outline: none;
+}
+
+/* Error states */
+
+.error-msg {
+  display: none;
+  color: var(--input-error-border);
+  font-size: 0.8rem;
+}
+
+.checkout-form input.input-error,
+.checkout-form select.input-error {
+  background-color: var(--input-error-bg) !important;
+  border: 2px solid var(--input-error-border) !important;
+}
+
 .checkout-error {
-  display: none; /* hidden by default */
-  background-color: #ffebeb;
-  color: #b31919;
-  border: 1px solid #e4a1a1;
-  padding: 12px 16px;
-  border-radius: 6px;
-  margin-bottom: 16px;
+  display: none;
+  margin-left: 48px;
 }

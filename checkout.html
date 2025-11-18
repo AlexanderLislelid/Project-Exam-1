@@ -98,6 +98,7 @@
                 autocomplete="given-name"
                 required
               />
+              <span class="error-msg"></span>
             </label>
 
             <label>
@@ -108,16 +109,19 @@
                 autocomplete="family-name"
                 required
               />
+              <span class="error-msg"></span>
             </label>
 
             <label>
               Email
               <input type="email" name="email" autocomplete="email" required />
+              <span class="error-msg"></span>
             </label>
 
             <label>
               Street address
               <input type="text" name="address" required />
+              <span class="error-msg"></span>
             </label>
 
             <label>
@@ -130,16 +134,19 @@
                 <option value="Finland">Finland</option>
                 <option value="Iceland">Iceland</option>
               </select>
+              <span class="error-msg"></span>
             </label>
 
             <label>
               Postal code
               <input type="text" name="zip" required />
+              <span class="error-msg"></span>
             </label>
 
             <label>
               Phone Number:
               <input type="tel" name="phone" required />
+              <span class="error-msg"></span>
             </label>
           </div>
 
@@ -150,6 +157,7 @@
             <label>
               Cardholder name
               <input type="text" name="cardName" required />
+              <span class="error-msg"></span>
             </label>
 
             <label>
@@ -160,17 +168,20 @@
                 name="cardNumber"
                 required
               />
+              <span class="error-msg"></span>
             </label>
 
             <div class="checkout__row">
               <label>
                 Expiry (MM/YY)
                 <input type="text" name="expiry" required />
+                <span class="error-msg"></span>
               </label>
 
               <label>
                 CVV
                 <input type="text" name="cvv" required />
+                <span class="error-msg"></span>
               </label>
             </div>
           </div>
@@ -182,6 +193,7 @@
             </button>
           </div>
         </form>
+        <div id="cart-checkout"></div>
       </section>
     </main>
     <footer>

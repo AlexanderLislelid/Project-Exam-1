@@ -49,3 +49,12 @@ export function isValidCVV(value) {
   const pattern = /^\d{3,4}$/;
   return pattern.test(value.trim());
 }
+
+// cardholder name
+export function isValidFullName(value) {
+  if (!isNotEmpty(value)) return false;
+
+  const pattern = /^[A-Za-zÆØÅæøå]+(?:\s+[A-Za-zÆØÅæøå]+)+$/;
+
+  return pattern.test(value.trim());
+}
