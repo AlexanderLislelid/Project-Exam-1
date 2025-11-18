@@ -83,11 +83,11 @@
       <p class="breadcrumbs-active-page">Checkout</p>
     </div>
     <main>
+      <h1 class="checkout-title">Checkout</h1>
+      <p class="checkout-error" id="checkoutError">
+        Please fill in all required fields correctly.
+      </p>
       <section class="checkout">
-        <h1 class="checkout-title">Checkout</h1>
-        <p class="checkout-error" id="checkoutError">
-          Please fill in all required fields correctly.
-        </p>
         <form class="checkout-form" id="checkoutForm" novalidate>
           <div class="checkout-form__userinfo">
             <label>
@@ -151,7 +151,7 @@
           </div>
 
           <!-- Payment -->
-          <div class="checkout__section">
+          <div class="payment-section">
             <h2>Payment Details</h2>
 
             <label>
@@ -193,7 +193,11 @@
             </button>
           </div>
         </form>
-        <div id="cart-checkout"></div>
+        <div class="checkout-summary">
+          <h2>Order summary</h2>
+          <div id="cart-checkout" class="checkout-cart"></div>
+          <div id="checkout-total" class="checkout-total"></div>
+        </div>
       </section>
     </main>
     <footer>
@@ -219,7 +223,8 @@
       </div>
       <p>&copy; 2025 Plethora. All rights reserved.</p>
     </footer>
-    <!-- <div id="page-loader" class="page-loader is-visible">
-      <div class="loader"></div> -->
+    <div id="page-loader" class="page-loader is-visible">
+      <div class="loader"></div>
+    </div>
   </body>
 </html>

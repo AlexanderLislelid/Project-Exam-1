@@ -9,6 +9,8 @@ import {
   isValidCVV,
   isValidFullName,
 } from "./utils/validators.js";
+import { showLoader, hideLoader } from "./utils/loader.js";
+import { getCart } from "../js/utils/cartfunctions.js";
 
 const validationRules = {
   firstName: {
@@ -57,6 +59,58 @@ const validationRules = {
   },
 };
 
+async function renderCart() {
+  showLoader();
+
+  let cart = await getCart();
+  const cartWrapper = document.getElementById("cart-checkout");
+  const totalPriceWrapper = document.getElementById("checkout-total");
+
+  cartWrapper.innerHTML = "";
+  let cartTotal = 0;
+
+  try {
+    cart.forEach((item) => {
+      const itemWrapper = document.createElement("div");
+      const itemInfo = document.createElement("div");
+      const title = document.createElement("p");
+      const img = document.createElement("img");
+      const qty = document.createElement("p");
+      const price = document.createElement("p");
+      const totalItemPrice = document.createElement("p");
+      const unitPrice = item.discountedPrice ?? item.price;
+
+      itemWrapper.className = "item-wrapper";
+
+      title.textContent = item.title;
+
+      img.src = item.image.url;
+      img.alt = item.image.alt;
+      img.className = "checkout-cart__image";
+
+      qty.textContent = `${item.quantity} x`;
+      price.textContent = `${unitPrice.toFixed(2)} kr`;
+      totalItemPrice.textContent = `${(item.quantity * unitPrice).toFixed(
+        2
+      )} kr`;
+
+      cartTotal += item.quantity * unitPrice;
+
+      itemInfo.append(title, qty, totalItemPrice);
+      itemWrapper.append(img, itemInfo);
+      cartWrapper.append(itemWrapper);
+    });
+
+    if (totalPriceWrapper) {
+      totalPriceWrapper.textContent = `Total: ${cartTotal.toFixed(2)} kr`;
+    }
+  } catch (error) {
+    console.error("Failed to render cart", error);
+  } finally {
+    hideLoader();
+  }
+}
+
 const checkoutForm = document.getElementById("checkoutForm");
 const errorBox = document.getElementById("checkoutError");
 
@@ -101,3 +155,5 @@ checkoutForm.addEventListener("submit", (event) => {
   errorBox.style.display = "none";
   window.location.href = "success.html";
 });
+
+renderCart();
