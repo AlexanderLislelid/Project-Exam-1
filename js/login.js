@@ -1,39 +1,71 @@
+// Hent elementer
 const form = document.getElementById("login");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
 const errorBox = document.getElementById("error-msg");
 
-// Admin user login
-const adminEmail = "hardcoded@user.com";
-const adminPassword = "1234";
+// Noroff login-endpoint
+const API_LOGIN_URL = "https://v2.api.noroff.dev/auth/login";
 
-function isAdminLoggedIn() {
-  return localStorage.getItem("isAdminLoggedIn") === "true";
+// Hvis bruker allerede er logget inn (har token) → send til profile
+if (localStorage.getItem("accessToken")) {
+  window.location.href = "/account/profile.html";
 }
 
-if (isAdminLoggedIn()) {
-  window.location.href = "profile.html";
-}
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
 
-  if (!email.value || !password.value) {
-    showError("Please enter email and password.");
+  if (!email || !password) {
+    showError("Please enter both email and password.");
     return;
   }
 
-  if (email.value === adminEmail && password.value === adminPassword) {
-    localStorage.setItem("isAdminLoggedIn", "true");
+  try {
+    // disable knapp mens vi logger inn
     const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
     submitButton.textContent = "Logging in...";
 
-    setTimeout(() => {
-      window.location.href = "profile.html";
-    }, 1500);
-    return;
+    // kall API
+    const response = await fetch(API_LOGIN_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      const message =
+        result.errors?.[0]?.message || "Login failed. Please try again.";
+      throw new Error(message);
+    }
+
+    const data = result.data;
+    const accessToken = data.accessToken;
+
+    // lagre token + brukerdata i localStorage
+    localStorage.setItem("accessToken", accessToken);
+    localStorage.setItem("user", JSON.stringify(data));
+
+    // rydde opp feilmelding (om den var synlig)
+    hideError();
+
+    // send bruker videre til profile-sida
+    window.location.href = "/account/profile.html";
+  } catch (error) {
+    console.error(error);
+    showError(error.message);
+  } finally {
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.disabled = false;
+    submitButton.textContent = "Log In";
   }
-  showError("Incorrect email or password.");
 });
 
 function showError(message) {
@@ -41,8 +73,12 @@ function showError(message) {
   errorBox.style.display = "block";
 }
 
-[email, password].forEach((input) =>
-  input.addEventListener("input", () => {
-    errorBox.style.display = "none";
-  })
-);
+function hideError() {
+  errorBox.textContent = "";
+  errorBox.style.display = "none";
+}
+
+// valgfritt: skjul error når bruker begynner å skrive igjen
+[emailInput, passwordInput].forEach((input) => {
+  input.addEventListener("input", hideError);
+});
