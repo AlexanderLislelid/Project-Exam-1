@@ -28,14 +28,13 @@
     <title>Login</title>
     <meta
       name="description"
-      content="Sign in to your Plethora account to view your orders, manage details, and enjoy a personalized shopping experience."
+      content="view your Plethora account, change profile information and view your orders"
     />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/components/navbar.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
     <link rel="stylesheet" href="../css/login.css" />
     <script type="module" src="../js/nav.js"></script>
-    <script type="module" src="../js/login.js"></script>
   </head>
   <body>
     <nav class="nav-desktop">
@@ -46,7 +45,7 @@
           /></a>
         </li>
         <li><a href="../shop.html">Shop</a></li>
-        <li><a href="./about.html">About</a></li>
+        <li><a href="../about.html">About</a></li>
         <li><a href="../contact.html">Contact</a></li>
         <li>
           <a href="./login.html"
@@ -77,48 +76,9 @@
     <div class="breadcrumbs">
       <a href="../index.html">Home</a>
       <i class="fa-solid fa-arrow-right"></i>
-      <p class="breadcrumbs-active-page">Login</p>
+      <p class="breadcrumbs-active-page">Your account</p>
     </div>
-    <main>
-      <section class="login-box">
-        <form id="login" class="login-form" novalidate>
-          <h1>Login</h1>
-          <span id="error-msg" class="error-msg" aria-live="polite"></span>
-          <div class="input-group">
-            <label for="email" class="visually-hidden">Email</label>
-            <i class="fa-solid fa-envelope input-icon"></i>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-              inputmode="email"
-              autocomplete="email"
-              required
-            />
-          </div>
-
-          <div class="input-group">
-            <label for="password" class="visually-hidden">Password</label>
-            <i class="fa-solid fa-lock input-icon"></i>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              autocomplete="current-password"
-              required
-            />
-          </div>
-
-          <button type="submit" class="login-btn">Log In</button>
-          <div class="signup-msg">
-            <p>Don't have an account?</p>
-            <a href="./register.html">Sign up here</a>
-          </div>
-        </form>
-      </section>
-    </main>
+    <main></main>
     <footer>
       <div class="footer-links">
         <a href="../index.html">
