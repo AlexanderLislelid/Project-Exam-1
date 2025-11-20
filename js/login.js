@@ -1,17 +1,19 @@
-import {
-  isAdminLoggedIn,
-  requireAdminLogin,
-  logoutAdmin,
-} from "../js/utils/auth.js";
-
 const form = document.getElementById("login");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const errorBox = document.getElementById("error-msg");
 
-// enkel admin bruker
-const ADMIN_EMAIL = "hardcoded@user.com";
-const ADMIN_PASSWORD = "1234";
+// Admin user login
+const adminEmail = "hardcoded@user.com";
+const adminPassword = "1234";
+
+function isAdminLoggedIn() {
+  return localStorage.getItem("isAdminLoggedIn") === "true";
+}
+
+if (isAdminLoggedIn()) {
+  window.location.href = "profile.html";
+}
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -21,9 +23,14 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  if (email.value === ADMIN_EMAIL && password.value === ADMIN_PASSWORD) {
-    localStorage.setItem("isAdmin", "true"); // markér at admin er innlogga
-    window.location.href = "profile.html";
+  if (email.value === adminEmail && password.value === adminPassword) {
+    localStorage.setItem("isAdminLoggedIn", "true");
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.textContent = "Logging in...";
+
+    setTimeout(() => {
+      window.location.href = "profile.html";
+    }, 1500);
     return;
   }
   showError("Incorrect email or password.");
@@ -34,7 +41,6 @@ function showError(message) {
   errorBox.style.display = "block";
 }
 
-// optional: fjern feilmelding når brukar skriver
 [email, password].forEach((input) =>
   input.addEventListener("input", () => {
     errorBox.style.display = "none";

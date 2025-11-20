@@ -30,7 +30,7 @@
   --primary-text: #1c1c1c; /* Primary text color */
   --secondary-text: #5a5a5a; /* Secondary text color, for placeholder text etc */
   --input-focus-border: #b8a36a;
-  --input-error-border: #c62828; /* Error border on form input */
+  --input-error-border: #c62828; /* Error border on form input !!use as error text color aswell */
   --input-error-bg: #fdecea; /* Error background on form input */
 
   --border-color: #e4e2dd; /* Border Color */
