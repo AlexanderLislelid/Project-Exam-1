@@ -1,4 +1,3 @@
-// Hent elementer
 const form = document.getElementById("login");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
@@ -7,7 +6,7 @@ const errorBox = document.getElementById("error-msg");
 // Noroff login-endpoint
 const API_LOGIN_URL = "https://v2.api.noroff.dev/auth/login";
 
-// Hvis bruker allerede er logget inn (har token) → send til profile
+//- if userf is already logged in, navigate to profile
 if (localStorage.getItem("accessToken")) {
   window.location.href = "profile.html";
 }
@@ -24,12 +23,10 @@ form.addEventListener("submit", async (event) => {
   }
 
   try {
-    // disable knapp mens vi logger inn
     const submitButton = form.querySelector('button[type="submit"]');
     submitButton.disabled = true;
     submitButton.textContent = "Logging in...";
 
-    // kall API
     const response = await fetch(API_LOGIN_URL, {
       method: "POST",
       headers: {
@@ -54,7 +51,6 @@ form.addEventListener("submit", async (event) => {
 
     hideError();
 
-    // send bruker videre til profile-sida
     window.location.href = "/account/profile.html";
   } catch (error) {
     console.error(error);
@@ -76,7 +72,6 @@ function hideError() {
   errorBox.style.display = "none";
 }
 
-// valgfritt: skjul error når bruker begynner å skrive igjen
 [emailInput, passwordInput].forEach((input) => {
   input.addEventListener("input", hideError);
 });
