@@ -9,7 +9,7 @@ const API_LOGIN_URL = "https://v2.api.noroff.dev/auth/login";
 
 // Hvis bruker allerede er logget inn (har token) → send til profile
 if (localStorage.getItem("accessToken")) {
-  window.location.href = "/account/profile.html";
+  window.location.href = "profile.html";
 }
 
 form.addEventListener("submit", async (event) => {
@@ -49,11 +49,9 @@ form.addEventListener("submit", async (event) => {
     const data = result.data;
     const accessToken = data.accessToken;
 
-    // lagre token + brukerdata i localStorage
     localStorage.setItem("accessToken", accessToken);
     localStorage.setItem("user", JSON.stringify(data));
 
-    // rydde opp feilmelding (om den var synlig)
     hideError();
 
     // send bruker videre til profile-sida

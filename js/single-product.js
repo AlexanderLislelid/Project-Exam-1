@@ -1,6 +1,7 @@
 import { showLoader, hideLoader } from "../js/utils/loader.js";
 import { addToCart } from "../js/utils/cartfunctions.js";
 import { isAdminLoggedIn } from "../js/utils/auth.js";
+
 async function renderSingleProduct() {
   const id = new URLSearchParams(window.location.search).get("id");
   showLoader();
@@ -45,10 +46,10 @@ async function renderSingleProduct() {
     buyBtn.className = "buy-button";
     buyBtn.textContent = "Buy Now";
 
-    //add product to cart/require admin login
+    //add product to cart/require token
     buyBtn.addEventListener("click", () => {
-      if (isAdminLoggedIn()) {
-        // !isAdminLoggedIn() remember to change!!!!!
+      const token = localStorage.getItem("accessToken");
+      if (token) {
         addToCart(product);
         buyBtn.textContent = "Added!";
 
