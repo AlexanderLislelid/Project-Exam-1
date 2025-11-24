@@ -86,7 +86,7 @@ async function renderCart() {
         }
       });
 
-      qtyWrapper.append(increase, qty, decrease);
+      qtyWrapper.append(decrease, qty, increase);
       itemWrapper.append(title, totalItemPrice, qtyWrapper, image);
       cartWrapper.append(itemWrapper);
     });
