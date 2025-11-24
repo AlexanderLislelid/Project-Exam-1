@@ -63,7 +63,6 @@
 
 .active-page-mobile {
   color: var(--nav-hover);
-  /* background-color: rgba(255, 255, 255, 0.3); Fine tune or remove */
 }
 
 @media (max-width: 650px) {
