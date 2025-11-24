@@ -74,6 +74,7 @@
   font-size: 0.8rem;
   background-color: var(--border-color);
   text-transform: capitalize;
+  box-shadow: var(--shadow-light);
 }
 
 .single-product__title {
