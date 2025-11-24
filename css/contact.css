@@ -31,15 +31,7 @@
 
 .contact-card__title {
   margin-bottom: var(--spacing-8);
-}
-
-/* Cards */
-
-.contact-card {
-  background-color: var(--section-background);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 16px 20px;
+  font-size: var(--font-size-h2);
 }
 
 .contact-card p {
@@ -50,6 +42,15 @@
   color: inherit;
   text-decoration: underline;
   text-decoration-thickness: 1px;
+}
+
+/* Cards */
+
+.contact-card {
+  background-color: var(--section-background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px 20px;
 }
 
 /* Form */
@@ -89,8 +90,8 @@
   border-radius: 8px;
   border: 1px solid var(--border-color);
   padding: 0.5rem 0.75rem;
-  font: inherit;
   background-color: var(--primary-background);
+  font: inherit;
 }
 
 .contact-form textarea {
