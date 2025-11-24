@@ -60,6 +60,12 @@
   border-radius: 5px;
 }
 
+/* Popup messages */
+
+.toast-message {
+  position: fixed;
+}
+
 /* Typography */
 
 .tags-wrapper {
@@ -136,9 +142,7 @@
     margin: 100px var(--spacing-24) var(--spacing-48);
     align-items: flex-start;
   }
-  .toast-message {
-    position: fixed;
-  }
+
   .product-description {
     display: flex;
     flex-direction: column;
