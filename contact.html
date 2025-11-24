@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/components/navbar.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
-    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
     <script type="module" src="./js/nav.js"></script>
   </head>
   <body>
@@ -73,7 +73,139 @@
         </li>
       </ul>
     </div>
-    <main></main>
+    <main class="contact" aria-labelledby="contact-heading">
+      <section class="contact__wrapper">
+        <header class="contact__header">
+          <h1 id="contact-heading" class="contact__title">Contact</h1>
+          <p class="contact__intro">
+            Have a question about your order, returns, or our products? Reach
+            out to us and we'll get back to you as soon as we can.
+          </p>
+        </header>
+
+        <section class="contact__grid">
+          <div class="contact__info">
+            <article class="contact-card">
+              <h2 class="contact-card__title">Customer Support</h2>
+              <p>
+                Email:
+                <a href="mailto:support@plethora-shop.com"
+                  >support@plethora-shop.com</a
+                >
+              </p>
+              <p>Phone: <a href="tel:+4756928840">+47 99 92 88 40</a></p>
+              <p>Hours: Monday - Friday, 09:00 - 16:00</p>
+            </article>
+
+            <article class="contact-card">
+              <h2 class="contact-card__title">Business Inquiries</h2>
+              <p>
+                Email:
+                <a href="mailto:business@plethora-shop.com"
+                  >business@plethora-shop.com</a
+                >
+              </p>
+            </article>
+
+            <article class="contact-card">
+              <h2 class="contact-card__title">Returns & Exchanges</h2>
+              <p>
+                Email:
+                <a href="mailto:returns@plethora-shop.com"
+                  >returns@plethora-shop.com</a
+                >
+              </p>
+              <p>
+                Plethora Returns Department<br />
+                Karl Johans gate 27<br />
+                0159 Oslo, Norway
+              </p>
+            </article>
+
+            <article class="contact-card">
+              <h2 class="contact-card__title">Head Office</h2>
+              <p>Plethora AS</p>
+              <p>Storgata 58<br />0182 Oslo<br />Norway</p>
+            </article>
+
+            <article class="contact-card">
+              <h2 class="contact-card__title">Social media</h2>
+              <p>Instagram: @plethora.norway</p>
+              <p>Facebook: Plethora Shop</p>
+              <p>TikTok: @plethoraofficial</p>
+            </article>
+          </div>
+
+          <!-- Contact form -->
+          <div class="contact__form-wrapper">
+            <h2 class="contact-form__title">Send us a message</h2>
+            <form class="contact-form" novalidate>
+              <div class="contact-form__field">
+                <label for="name">Full name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  placeholder="Jane Doe"
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  inputmode="email"
+                  autocomplete="email"
+                  required
+                  placeholder="jane.doe@example.com"
+                />
+              </div>
+
+              <div class="contact-form__field">
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic" required>
+                  <option value="">Choose a topic</option>
+                  <option value="order">Order question</option>
+                  <option value="returns">Returns & exchanges</option>
+                  <option value="product">Product information</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="contact-form__field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Write your message here..."
+                ></textarea>
+              </div>
+
+              <div class="contact-form__checkbox">
+                <input type="checkbox" id="newsletter" name="newsletter" />
+                <label for="newsletter"
+                  >Send me updates about new products and offers</label
+                >
+              </div>
+
+              <button type="submit" class="contact-form__submit">
+                Send message
+              </button>
+
+              <p class="contact-form__helper">
+                We usually respond within 1–2 business days.
+              </p>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
     <footer>
       <div class="footer-links">
         <a href="./index.html">

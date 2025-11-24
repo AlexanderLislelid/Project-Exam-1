@@ -22,6 +22,7 @@ export async function fetchAllProducts() {
       card.href = `product.html?id=${product.id}`;
       card.className = "products-card";
       img.src = product.image.url;
+      img.alt = product.title;
       img.className = "product-images";
       title.textContent = product.title;
       price.innerHTML = `<span class="price-amount">${product.price}</span><span class="price-currency"> kr</span>`;
