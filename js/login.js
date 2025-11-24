@@ -51,7 +51,7 @@ form.addEventListener("submit", async (event) => {
 
     hideError();
 
-    window.location.href = "account/profile.html";
+    window.location.href = "profile.html";
   } catch (error) {
     console.error(error);
     showError(error.message);
