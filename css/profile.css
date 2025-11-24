@@ -1,0 +1,47 @@
+/* Layout */
+
+#profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-24);
+  background-color: var(--section-background);
+  border: 2px solid var(--border-color);
+  margin: var(--spacing-24);
+  padding: var(--spacing-24);
+}
+
+/* profile */
+
+.profile-pic {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.profile-name {
+  font-size: var(--font-size-h1);
+  font-weight: 600;
+}
+
+.logout-btn {
+  padding: var(--padding-button);
+  background-color: var(--button-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+  background-color: var(--button-hover);
+  scale: 102%;
+  box-shadow: var(--shadow-medium);
+}
+
+/* Mobile screen adjustments */
+
+@media (max-width: 650px) {
+  #profile-info {
+    margin-top: 100px;
+  }
+}

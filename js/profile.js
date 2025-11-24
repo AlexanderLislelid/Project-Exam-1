@@ -11,9 +11,29 @@ const user = JSON.parse(localStorage.getItem("user"));
 console.log(user);
 
 if (user) {
+  const avatar = document.createElement("img");
+  avatar.src = user.avatar.url;
+  avatar.className = "profile-pic";
+
   const userName = document.createElement("h1");
   userName.textContent = `Hello ${user.name}`;
-  profileWrapper.append(userName);
+  userName.className = "profile-name";
+
+  const logoutBtn = document.createElement("button");
+  logoutBtn.textContent = "Log out";
+  logoutBtn.className = "logout-btn";
+
+  logoutBtn.addEventListener("click", (e) => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("accessToken");
+
+    logoutBtn.textContent = "Logging out...";
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 1500);
+  });
+
+  profileWrapper.append(avatar, userName, logoutBtn);
 } else {
   console.error("User not found in localStorage");
 }
