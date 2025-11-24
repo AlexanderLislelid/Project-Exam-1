@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="./css/components/navbar.css" />
     <link rel="stylesheet" href="./css/components/footer.css" />
     <link rel="stylesheet" href="./css/homepage.css" />
-    <script type="module" src="js/product-feed.js"></script>
+    <script type="module" src="js/shop.js"></script>
     <script type="module" src="./js/nav.js"></script>
   </head>
   <body>
@@ -45,7 +45,7 @@
             ><img src="./images/logo.png" class="nav-logo"
           /></a>
         </li>
-        <li><a href="./shop.html" class="active-page-mobile">Shop</a></li>
+        <li><a href="./shop.html">Shop</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./contact.html">Contact</a></li>
         <li>
@@ -74,6 +74,11 @@
         </li>
       </ul>
     </div>
+    <div class="breadcrumbs">
+      <a href="./index.html">Home</a>
+      <i class="fa-solid fa-arrow-right"></i>
+      <p class="breadcrumbs-active-page">Shop</p>
+    </div>
     <main>
       <h2 class="collection-heading">OUR COLLECTION</h2>
       <div class="products"></div>
@@ -101,5 +106,8 @@
       </div>
       <p>&copy; 2025 Plethora. All rights reserved.</p>
     </footer>
+    <div id="page-loader" class="page-loader is-visible">
+      <div class="loader"></div>
+    </div>
   </body>
 </html>

@@ -71,6 +71,17 @@ async function createImageSlider() {
   const nextBtn = document.querySelector(".next-btn");
   const buyBtn = document.querySelector(".buy-btn");
 
+  if (
+    !slider ||
+    !controls ||
+    !prevBtn ||
+    !nextBtn ||
+    !buyBtn ||
+    products.length === 0
+  ) {
+    return;
+  }
+
   controls.append(prevBtn, buyBtn, nextBtn);
 
   products.forEach((product) => {
