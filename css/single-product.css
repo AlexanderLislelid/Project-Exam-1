@@ -23,7 +23,8 @@
 
 #description-text h2,
 #description-price h2,
-#description-rating h2 {
+#description-rating h2,
+#description-tags h2 {
   margin-bottom: var(--spacing-8);
 }
 
@@ -60,6 +61,20 @@
 }
 
 /* Typography */
+
+.tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
+}
+
+.tag {
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  background-color: var(--border-color);
+  text-transform: capitalize;
+}
 
 .single-product__title {
   margin-bottom: var(--spacing-24);

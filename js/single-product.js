@@ -18,6 +18,24 @@ async function renderSingleProduct() {
     const descriptionText = document.getElementById("description-text");
     const descriptionPrice = document.getElementById("description-price");
     const descriptionRating = document.getElementById("description-rating");
+    const descriptionTags = document.getElementById("description-tags");
+
+    if (Array.isArray(product.tags) && product.tags.length > 0) {
+      const tagsWrapper = document.createElement("div");
+      tagsWrapper.className = "tags-wrapper";
+
+      product.tags.forEach((tag) => {
+        const tagElement = document.createElement("span");
+        tagElement.className = "tag";
+        tagElement.textContent = tag;
+        tagsWrapper.append(tagElement);
+      });
+
+      descriptionTags.append(tagsWrapper);
+    } else {
+      // valgfritt: skjul seksjonen om ingen tags
+      descriptionTags.style.display = "none";
+    }
 
     const title = document.createElement("h1");
     title.textContent = product.title;
