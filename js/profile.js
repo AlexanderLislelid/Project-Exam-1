@@ -4,21 +4,16 @@ if (!token) {
   window.location.href = "login.html";
 }
 
-// const profileWrapper = (document.getElementById = "profile-info");
+const profileWrapper = document.getElementById("profile-info");
 
-// const userName = document.createElement("h1");
+const user = JSON.parse(localStorage.getItem("user"));
 
-// const userData = localStorage.getItem("user");
-// let userNameText = "Unknown User";
-// if (userData) {
-//   try {
-//     const userObj = JSON.parse(userData);
-//     if (userObj && userObj.name) {
-//       userNameText = userObj.name;
-//     }
-//   } catch (e) {
-//     // handle JSON parse error, keep default
-//   }
-// }
-// userName.textContent = userNameText;
-profileWrapper.append(userName);
+console.log(user);
+
+if (user) {
+  const userName = document.createElement("h1");
+  userName.textContent = `Hello ${user.name}`;
+  profileWrapper.append(userName);
+} else {
+  console.error("User not found in localStorage");
+}
