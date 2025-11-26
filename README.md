@@ -20,7 +20,7 @@ List the main tools and technologies used in this project:
 
 ![Static Badge](https://img.shields.io/badge/CSS-purple)
 
-![Static Badge](https://img.shields.io/badge/JavaScript-yellow)
+![Static Badge](https://img.shields.io/badge/JavaScript-lightblue)
 
 ---
 
@@ -31,13 +31,13 @@ Follow these steps to get a copy of the project running locally:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/AlexanderLislelid/Project-Exam-1.git
    ```
 
 2. Open the repository:
 
 ```bash
-  cd your-repo-name
+  cd Project-Exam-1
 ```
 
 3. Run Live Server
@@ -50,6 +50,6 @@ MIT License
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Alexander Lislelid - [@twitter_handle](https://twitter.com/twitter_handle) - alexlislelid@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/AlexanderLislelid/Project-Exam-1](https://github.com/AlexanderLislelid/Project-Exam-1)
