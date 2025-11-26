@@ -8,8 +8,6 @@ const profileWrapper = document.getElementById("profile-info");
 
 const user = JSON.parse(localStorage.getItem("user"));
 
-console.log(user);
-
 if (user) {
   const avatar = document.createElement("img");
   avatar.src = user.avatar.url;
