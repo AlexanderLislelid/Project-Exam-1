@@ -1,0 +1,38 @@
+/* Layout */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+  align-items: center;
+}
+
+.about-info {
+  background-color: var(--section-background);
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  max-width: 500px;
+}
+
+.about h1,
+.about h2 {
+  font-size: var(--font-size-h1);
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.cta-btn {
+  padding: var(--padding-button);
+  background-color: var(--button-hover);
+  width: 250px;
+  color: white;
+  border-radius: 999px;
+}
+
+@media (max-width: 650px) {
+  .about {
+    margin: 100px var(--spacing-24);
+  }
+}
