@@ -12,6 +12,7 @@ if (user) {
   const avatar = document.createElement("img");
   avatar.src = user.avatar.url;
   avatar.className = "profile-pic";
+  avatar.alt = "Profile picture";
 
   const userName = document.createElement("h1");
   userName.textContent = `Hello ${user.name}`;
