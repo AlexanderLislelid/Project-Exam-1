@@ -52,8 +52,17 @@ async function renderCart() {
 
       qty.textContent = item.quantity;
 
-      increase.className = "fa-solid fa-plus";
-      decrease.className = "fa-solid fa-minus";
+      increase.className = "qty-btn qty-btn--increase";
+      increase.innerHTML = `
+  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+  <span class="visually-hidden">Increase quantity</span>
+`;
+
+      decrease.className = "qty-btn qty-btn--decrease";
+      decrease.innerHTML = `
+  <i class="fa-solid fa-minus" aria-hidden="true"></i>
+  <span class="visually-hidden">Decrease quantity</span>
+`;
 
       increase.addEventListener("click", () => {
         addToCart(item);
