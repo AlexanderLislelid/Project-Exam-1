@@ -20,7 +20,7 @@ List the main tools and technologies used in this project:
 
 ![Static Badge](https://img.shields.io/badge/CSS-purple)
 
-![Static Badge](https://img.shields.io/badge/JavaScript-lightblue)
+![Static Badge](https://img.shields.io/badge/JavaScript-yellow)
 
 ---
 
