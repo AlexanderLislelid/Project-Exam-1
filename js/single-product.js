@@ -10,8 +10,6 @@ async function renderSingleProduct() {
     const result = await response.json();
     const product = result.data;
 
-    console.log(product);
-
     const wrapper = document.getElementById("product-wrapper");
     const imageAndTitleWrapper = document.getElementById("title");
     const descriptionWrapper = document.getElementById("description");
@@ -107,7 +105,6 @@ async function renderSingleProduct() {
       if (navigator.share) {
         try {
           await navigator.share(shareData);
-          console.log("Shared successfully!");
         } catch (error) {
           console.warn("Share canceled or failed:", error);
         }
@@ -170,7 +167,7 @@ async function renderSingleProduct() {
       reviewWrapper.append(reviewCard);
     });
   } catch (error) {
-    console.log(error, "Could not Find product");
+    console.error(error, "Could not Find product");
   } finally {
     hideLoader();
   }
