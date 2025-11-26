@@ -1,6 +1,6 @@
 # Project Title
 
-A short sentence describing what the project is about.
+A front-end user interface for an existing e-commerce API.
 
 ---
 
