@@ -38,11 +38,11 @@
     <script type="module" src="./js/nav.js"></script>
   </head>
   <body>
-    <nav class="nav-desktop">
+    <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
       <ul class="nav-links">
         <li>
           <a href="./index.html"
-            ><img src="./images/logo.png" class="nav-logo"
+            ><img src="./images/logo.png" class="nav-logo" alt="Plethora logo"
           /></a>
         </li>
         <li><a href="./shop.html">Shop</a></li>
@@ -50,23 +50,43 @@
         <li><a href="./contact.html">Contact</a></li>
         <li>
           <a href="./account/login.html"
-            ><i class="fa-regular fa-circle-user fa-lg"></i>Account</a
+            ><i class="fa-regular fa-circle-user fa-lg" aria-hidden="true"></i
+            >Account</a
           >
         </li>
         <li>
           <a href="./cart.html"
-            ><i class="fa-solid fa-cart-shopping fa-lg"></i>Cart</a
+            ><i class="fa-solid fa-cart-shopping fa-lg" aria-hidden="true"></i
+            >Cart</a
           >
         </li>
       </ul>
     </nav>
     <div class="nav-mobile">
-      <i class="fa-solid fa-bars fa-lg" id="nav-toggle"></i>
-      <a href="./cart.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i>
+      </button>
+      <a href="./cart.html" aria-label="Shopping cart"
+        ><i class="fa-solid fa-cart-shopping fa-lg" aria-hidden="true"></i
+      ></a>
     </div>
-    <div class="nav-overlay">
+    <nav
+      class="nav-overlay"
+      role="navigation"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
       <ul>
-        <li><a href="./index.html" class="active-page-mobile">Home</a></li>
+        <li>
+          <a href="./index.html" class="active-page-mobile" aria-current="page"
+            >Home</a
+          >
+        </li>
         <li><a href="./shop.html">Shop</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./contact.html">Contact</a></li>
@@ -74,48 +94,71 @@
           <a href="./account/login.html">Account</a>
         </li>
       </ul>
-    </div>
+    </nav>
     <main>
       <h1 class="logo-text">PLETHORA</h1>
       <div class="carousel-container">
-        <div class="carousel-images" id="slider"></div>
+        <div
+          class="carousel-images"
+          id="slider"
+          role="region"
+          aria-label="Product carousel"
+        ></div>
         <div class="carousel-controls">
-          <button class="prev-btn">
-            <i class="fa-solid fa-circle-left"></i>
+          <button class="prev-btn" aria-label="Previous product">
+            <i class="fa-solid fa-circle-left" aria-hidden="true"></i>
           </button>
           <a class="buy-btn">Buy Now</a>
-          <button class="next-btn">
-            <i class="fa-solid fa-circle-right"></i>
+          <button class="next-btn" aria-label="Next product">
+            <i class="fa-solid fa-circle-right" aria-hidden="true"></i>
           </button>
         </div>
       </div>
       <h2 class="collection-heading">OUR COLLECTION</h2>
-      <div class="products"></div>
+      <div class="products" role="region" aria-label="Product collection"></div>
     </main>
-    <footer>
+    <footer role="contentinfo">
       <div class="footer-links">
         <a href="./index.html">
-          <img src="./images/logo.png" class="footer-logo" />
+          <img
+            src="./images/logo.png"
+            class="footer-logo"
+            alt="Plethora logo"
+          />
         </a>
         <p>Modern Essentials, beautifully made.</p>
         <a href="./about.html">About</a>
         <a href="./contact.html">Contact</a>
         <a href="./shop.html">Shop</a>
         <div class="social-media-icons">
-          <a href="https://www.instagram.com">
-            <i class="fa-brands fa-instagram"></i>
+          <a
+            href="https://www.instagram.com"
+            aria-label="Visit our Instagram page"
+          >
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="https://www.snapchat.com">
-            <i class="fa-brands fa-snapchat"></i>
+          <a
+            href="https://www.snapchat.com"
+            aria-label="Visit our Snapchat page"
+          >
+            <i class="fa-brands fa-snapchat" aria-hidden="true"></i>
           </a>
-          <a href="https://www.facebook.com">
-            <i class="fa-brands fa-facebook"></i>
+          <a
+            href="https://www.facebook.com"
+            aria-label="Visit our Facebook page"
+          >
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
           </a>
         </div>
       </div>
       <p>&copy; 2025 Plethora. All rights reserved.</p>
     </footer>
-    <div id="page-loader" class="page-loader is-visible">
+    <div
+      id="page-loader"
+      class="page-loader is-visible"
+      aria-label="Page loading"
+      aria-live="polite"
+    >
       <div class="loader"></div>
     </div>
   </body>
