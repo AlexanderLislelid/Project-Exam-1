@@ -48,17 +48,23 @@
 }
 
 .buy-btn {
+  background-color: var(--button-hover);
   padding: var(--padding-button);
-  background-color: var(--button-color);
+  max-width: 250px;
+  border-radius: 999px;
   color: white;
   margin-bottom: 32px;
-  border-radius: 5px;
+  border-radius: 999px;
 }
 
 .buy-btn:hover,
 .buy-btn:focus {
-  background-color: var(--primary-text);
+  background-color: var(--section-background);
   box-shadow: var(--shadow-medium);
+  scale: 103%;
+  border: none;
+  border: 2px solid var(--border-color);
+  color: black;
 }
 
 /* Product images */

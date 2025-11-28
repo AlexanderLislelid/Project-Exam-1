@@ -54,12 +54,12 @@
 .checkout-button,
 .clear-button {
   padding: var(--padding-button);
-  border-radius: 5px;
-  color: white;
+  border-radius: 999px;
 }
 
 .checkout-button {
-  background-color: var(--button-color);
+  background-color: var(--section-background);
+  border: 1px solid var(--primary-text);
 }
 
 .clear-button {
@@ -81,6 +81,8 @@
   background-color: var(--primary-text);
   box-shadow: var(--shadow-medium);
   scale: 102%;
+  border: none;
+  color: white;
 }
 
 .qty-wrapper {
