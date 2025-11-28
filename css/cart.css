@@ -58,8 +58,7 @@
 }
 
 .checkout-button {
-  background-color: var(--primary-text);
-
+  background-color: var(--button-color);
   color: white;
 }
 

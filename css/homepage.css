@@ -48,7 +48,7 @@
 }
 
 .buy-btn {
-  background-color: var(--button-hover);
+  background-color: var(--button-color);
   padding: var(--padding-button);
   max-width: 250px;
   border-radius: 999px;

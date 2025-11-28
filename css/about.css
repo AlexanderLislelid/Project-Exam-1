@@ -25,7 +25,7 @@
 
 .cta-btn {
   padding: var(--padding-button);
-  background-color: var(--button-hover);
+  background-color: var(--button-color);
   width: 250px;
   color: white;
   border-radius: 999px;

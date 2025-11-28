@@ -28,7 +28,7 @@
   padding: var(--padding-button);
   background-color: var(--button-color);
   color: white;
-  border-radius: 5px;
+  border-radius: 999px;
   cursor: pointer;
 }
 
@@ -37,6 +37,8 @@
   background-color: var(--button-hover);
   scale: 102%;
   box-shadow: var(--shadow-medium);
+  color: black;
+  border: 2px solid var(--border-color);
 }
 
 /* Mobile screen adjustments */

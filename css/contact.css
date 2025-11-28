@@ -112,7 +112,7 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
-  background-color: var(--button-hover);
+  background-color: var(--button-color);
   color: white;
 }
 

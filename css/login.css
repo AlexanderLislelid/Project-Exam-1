@@ -91,18 +91,21 @@
   max-width: 250px;
   width: 100%;
   padding: var(--padding-button);
+  border-radius: 999px;
   background-color: var(--button-color);
-  color: #fff;
-  border-radius: 5px;
+  color: white;
   border: none;
   cursor: pointer;
 }
 
 .login-btn:hover,
 .login-btn:focus {
-  background-color: var(--button-hover);
+  background-color: var(--section-background);
   box-shadow: var(--shadow-medium);
-  scale: 1.03;
+  scale: 102%;
+  color: black;
+  border: none;
+  border: 2px solid var(--border-color);
 }
 
 /* Validation error */
