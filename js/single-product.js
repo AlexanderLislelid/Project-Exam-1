@@ -82,8 +82,10 @@ async function renderSingleProduct() {
         const toast = document.createElement("div");
         toast.textContent = "Please log in to purchase products!";
         toast.className = "toast-message";
+        buyBtn.textContent = "Please log in";
         document.body.appendChild(toast);
         setTimeout(() => {
+          buyBtn.textContent = "Buy Now";
           toast.remove();
         }, 3000);
       }
