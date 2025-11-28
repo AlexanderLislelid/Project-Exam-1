@@ -137,3 +137,10 @@
     grid-template-columns: repeat(1, 200px);
   }
 }
+
+@media (max-width: 360px) {
+  .buy-btn {
+    font-size: 0.85rem;
+    padding: 10px 15px;
+  }
+}
