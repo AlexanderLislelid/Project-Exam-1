@@ -128,7 +128,7 @@
 .fa-solid.fa-share:hover,
 .fa-solid.fa-share:focus {
   scale: 120%;
-  color: var(--button-hover);
+  color: var(--button-color);
 }
 
 /* Smaller screens Layout */
