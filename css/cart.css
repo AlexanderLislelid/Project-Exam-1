@@ -58,8 +58,9 @@
 }
 
 .checkout-button {
-  background-color: var(--section-background);
-  border: 1px solid var(--primary-text);
+  background-color: var(--primary-text);
+
+  color: white;
 }
 
 .clear-button {
@@ -78,11 +79,12 @@
 
 .checkout-button:hover,
 .checkout-button:focus {
-  background-color: var(--primary-text);
+  background-color: var(--section-background);
   box-shadow: var(--shadow-medium);
   scale: 102%;
+  color: black;
   border: none;
-  color: white;
+  border: 2px solid var(--border-color);
 }
 
 .qty-wrapper {
