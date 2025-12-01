@@ -1,4 +1,4 @@
-# Project Title
+# Project Exam 1
 
 A front-end user interface for an existing e-commerce API.
 
