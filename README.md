@@ -6,8 +6,6 @@ A front-end user interface for an existing e-commerce API.
 
 ## 📸 Screenshot
 
-Add a screenshot of your project here (you can drag an image into GitHub or link it).
-
 ![Project Screenshot](./images/screenshot.png)
 
 ---
