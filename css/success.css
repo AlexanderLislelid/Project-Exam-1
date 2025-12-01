@@ -37,7 +37,7 @@
   color: white;
   padding: var(--padding-button);
   max-width: 250px;
-  border-radius: 5px;
+  border-radius: 999px;
   display: block;
   margin: 48px auto 0;
   text-align: center;
@@ -48,6 +48,7 @@
   background-color: var(--button-hover);
   box-shadow: var(--shadow-medium);
   scale: 103%;
+  color: var(--primary-text);
 }
 
 /* Smaller screens */
