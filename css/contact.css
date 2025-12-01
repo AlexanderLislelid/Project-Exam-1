@@ -121,8 +121,6 @@
   color: var(--secondary-text);
 }
 
-/* Responsiv */
-
 @media (max-width: 735px) {
   .contact__grid {
     grid-template-columns: 1fr;

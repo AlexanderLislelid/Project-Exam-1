@@ -43,6 +43,8 @@ h6 {
   color: var(--primary-text);
 }
 
+/* Buttons */
+
 button {
   background: none;
   border: none;
@@ -51,6 +53,8 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+
+/* Nav */
 
 .nav-overlay {
   display: none;
