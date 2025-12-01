@@ -42,7 +42,12 @@ Follow these steps to get a copy of the project running locally:
 
 3. Run Live Server
 
-   Insert instructions
+   ```bash
+   You can open the project using Live Server in VS Code:
+   1.	Open the folder in VS Code
+   2.	Right-click index.html
+   3.	Select “Open with Live Server”
+   ```
 
 ## License
 
@@ -53,3 +58,7 @@ MIT License
 Alexander Lislelid - [@twitter_handle](https://twitter.com/twitter_handle) - alexlislelid@gmail.com
 
 Project Link: [https://github.com/AlexanderLislelid/Project-Exam-1](https://github.com/AlexanderLislelid/Project-Exam-1)
+
+```
+
+```
