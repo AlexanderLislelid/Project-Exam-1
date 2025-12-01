@@ -67,18 +67,21 @@
     </nav>
     <div class="nav-mobile">
       <button
-        class="nav-toggle"
+        class="fa-solid fa-bars fa-lg"
         id="nav-toggle"
         aria-label="Toggle navigation menu"
         aria-expanded="false"
-      >
-        <i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i>
-      </button>
-      <a href="./cart.html" aria-label="Shopping cart"
-        ><i class="fa-solid fa-cart-shopping fa-lg" aria-hidden="true"></i
-      ></a>
+      ></button>
+      <a href="./cart.html" aria-label="Shopping cart">
+        <i class="fa-solid fa-cart-shopping fa-lg" aria-hidden="true"></i>
+      </a>
     </div>
-    <nav class="nav-overlay" aria-label="Mobile navigation" aria-hidden="true">
+    <div
+      class="nav-overlay"
+      id="nav-overlay"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
       <ul>
         <li>
           <a href="./index.html" class="active-page-mobile" aria-current="page"
@@ -92,7 +95,7 @@
           <a href="./account/login.html">Account</a>
         </li>
       </ul>
-    </nav>
+    </div>
     <main>
       <h1 class="logo-text">PLETHORA</h1>
       <div class="carousel-container">
