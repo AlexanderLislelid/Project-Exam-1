@@ -116,7 +116,7 @@ button {
 /* Stars */
 
 .fa-solid.fa-star {
-  color: var(--nav-hover);
+  color: var(--review-color);
 }
 .fa-regular.fa-star {
   color: var(--secondary-text);
