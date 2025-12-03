@@ -62,9 +62,8 @@
 }
 
 .input-group input {
-  width: 100%;
-  max-width: 280px;
-  height: 40px;
+  width: 250px;
+  height: 35px;
   padding-left: 40px;
   border-radius: 5px;
   border: 2px solid var(--border-color);
@@ -89,7 +88,6 @@
   margin-top: var(--spacing-16);
   align-self: center;
   max-width: 250px;
-  width: 100%;
   padding: var(--padding-button);
   border-radius: 999px;
   background-color: var(--button-color);
@@ -126,5 +124,11 @@
 @media (max-width: 650px) {
   .login-form {
     margin-top: 140px;
+  }
+}
+
+@media (max-width: 350px) {
+  .input-group input {
+    width: 100%;
   }
 }
