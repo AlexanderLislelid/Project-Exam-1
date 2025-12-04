@@ -96,26 +96,6 @@
   font-weight: var(--font-weight-regular);
 }
 
-/* Button */
-
-.buy-button {
-  background-color: var(--button-color);
-  padding: var(--padding-button);
-  max-width: 250px;
-  border-radius: 999px;
-  color: white;
-}
-
-.buy-button:hover,
-.buy-button:focus {
-  background-color: var(--section-background);
-  box-shadow: var(--shadow-medium);
-  scale: 103%;
-  border: none;
-  border: 2px solid var(--border-color);
-  color: black;
-}
-
 /* Share Icon */
 
 .fa-solid.fa-share {

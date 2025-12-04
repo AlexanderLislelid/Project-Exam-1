@@ -88,22 +88,6 @@
   margin-top: var(--spacing-16);
   align-self: center;
   max-width: 250px;
-  padding: var(--padding-button);
-  border-radius: 999px;
-  background-color: var(--button-color);
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.login-btn:hover,
-.login-btn:focus {
-  background-color: var(--section-background);
-  box-shadow: var(--shadow-medium);
-  scale: 102%;
-  color: black;
-  border: none;
-  border: 2px solid var(--border-color);
 }
 
 /* Validation error */

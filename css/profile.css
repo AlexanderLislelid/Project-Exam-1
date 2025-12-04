@@ -24,23 +24,6 @@
   font-weight: 600;
 }
 
-.logout-btn {
-  padding: var(--padding-button);
-  background-color: var(--button-color);
-  color: white;
-  border-radius: 999px;
-  cursor: pointer;
-}
-
-.logout-btn:hover,
-.logout-btn:focus {
-  background-color: var(--button-hover);
-  scale: 102%;
-  box-shadow: var(--shadow-medium);
-  color: black;
-  border: 2px solid var(--border-color);
-}
-
 /* Mobile screen adjustments */
 
 @media (max-width: 650px) {

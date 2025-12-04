@@ -107,13 +107,7 @@
 }
 
 .contact-form__submit {
-  padding: var(--padding-button);
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
   font-weight: 600;
-  background-color: var(--button-color);
-  color: white;
 }
 
 .contact-form__helper {

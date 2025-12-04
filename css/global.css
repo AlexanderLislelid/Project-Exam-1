@@ -54,6 +54,46 @@ button {
   outline: inherit;
 }
 
+.home-btn,
+.buy-btn,
+.buy-button,
+.logout-btn,
+.login-btn,
+.contact-form__submit,
+.checkout-btn,
+.checkout-button,
+.cta-btn {
+  padding: var(--padding-button);
+  background-color: var(--button-color);
+  color: white;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.home-btn:hover,
+.home-btn:focus,
+.buy-button:hover,
+.buy-button:focus,
+.buy-btn:hover,
+.buy-btn:focus,
+.logout-btn:hover,
+.logout-btn:focus,
+.login-btn:hover,
+.login-btn:focus,
+.contact-form__submit:hover,
+.contact-form__submit:focus,
+.checkout-btn:hover,
+.checkout-btn:focus,
+.checkout-button:hover,
+.checkout-button:focus,
+.cta-btn:hover,
+.cta-btn:focus {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  color: var(--primary-text);
+}
+
 /* Nav */
 
 .nav-overlay {
