@@ -1,3 +1,5 @@
+import { isValidName, isValidEmail } from "./utils/validators.js";
+
 const form = document.getElementById("register");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -17,6 +19,16 @@ form.addEventListener("submit", async (event) => {
 
   if (!name || !email || !password || !confirmPassword) {
     showError("Please fill in all fields.");
+    return;
+  }
+
+  if (!isValidName(name)) {
+    showError("Please enter a valid name.");
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    showError("Please enter a valid email address.");
     return;
   }
 
